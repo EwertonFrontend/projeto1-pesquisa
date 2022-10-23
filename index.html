@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expandindo a barra de pesquisa em css</title>
+    <style>
+        .pesquisa{position: absolute;
+            padding: 10px;
+            background: linear-gradient(0deg, rgb(15, 7, 37) 
+            0%, rgb(66, 149, 226) 100%);
+            border-radius: 15px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            top: 50%;
+            left: 50%;
+            
+        }
+        .pesquisa__input{
+            width: 0;
+            border: 0;
+            outline: 0;
+            background: 0;
+            font-size: 16px;
+            padding: 0;
+            transition: 0.4s;
+        }
+        ::-webkit-input-placeholder{
+            font-size: 1.2em;
+            color: white;
+        }
+        .botao{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 0;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .pesquisa:hover > .pesquisa__input{
+            width: 320px;
+            padding-left: 15px;
+        }
+        body{
+            background-color: black;
+        }
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <form class="pesquisa">
+        <input type="text" placeholder="Pesquisar..." class="pesquisa__input">
+        <button class="botao">
+            <img src="lupa.png" alt="">
+        </button> 
+    </form>
+</body>
+</html>
